@@ -10,9 +10,9 @@ module ultrasonic_driver(
 // ---------------- PARAMETERS ----------------
 localparam TRIG_TICKS      = 500;      // 10 us @ 50 MHz
 localparam SETTLE_TICKS    = 50;       // 1 us
-localparam WAIT_ECHO_TIMEOUT = 600000; // 12 ms
-localparam ECHO_MAX_TICKS  = 600000;   // max valid echo
-localparam RETRIG_DELAY    = 4000000;  // 60 ms (prevents cross-talk)
+localparam WAIT_ECHO_TIMEOUT = 600000; // 12 ms, Echo Timeout
+localparam ECHO_MAX_TICKS  = 600000;   // max valid echo, Max Distance Capped to 100cm
+localparam RETRIG_DELAY    = 4000000;  // Delay between Re-Trigger 60 ms
 
 // FSM STATES
 localparam FSM_IDLE        = 3'd0,
